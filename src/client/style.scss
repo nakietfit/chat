@@ -154,16 +154,16 @@ body {
     }
     
     .my-message {
-      background: $green;
-    }
-    
-    .other-message {
       background: $blue;
-      
+
       &:after {
         border-bottom-color: $blue;
         left: 93%;
       }
+    }
+    
+    .other-message {
+      background: $green;
     }
     
   }

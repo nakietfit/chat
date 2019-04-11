@@ -13,7 +13,7 @@ export default class Message extends Component {
                 <span class="message-data-time">{message.time}</span> &nbsp; &nbsp;
                 <span class="message-data-name">{message.name}</span> <i class="fa fa-circle me"></i>
               </div>
-              <div class="message other-message float-right">{message.message}</div>
+              <div class="message my-message float-right">{message.message}</div>
             </li>
           ) : (
             <li>
@@ -21,7 +21,7 @@ export default class Message extends Component {
                 <span class="message-data-name"><i class="fa fa-circle online"></i> {message.name}</span>
                 <span class="message-data-time">{message.time}</span>
               </div>
-              <div class="message my-message">{message.message}</div>
+              <div class="message other-message">{message.message}</div>
             </li>
           )
         }
