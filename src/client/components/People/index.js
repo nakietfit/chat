@@ -2,21 +2,23 @@ import React, { Component } from 'react'
 
 export default class People extends Component {
   render() {
+    const { people } = this.props
+
     let statusClass = ''
-    if (this.props.people.status == 'online') {
+    if (people.status == 'online') {
       statusClass = 'fa fa-circle online'
     }
-    if (this.props.people.status != 'online') {
+    if (people.status != 'online') {
       statusClass = 'fa fa-circle offline'
     }
 
     return (
       <li class="clearfix">
-        <img src={this.props.people.avatar} alt="avatar" />
+        <img src={people.avatar} alt="avatar" />
         <div class="about">
-          <div class="name">{this.props.people.name}</div>
+          <div class="name">{people.name}</div>
           <div class="status">
-            <i class={statusClass}></i> {this.props.people.status}
+            <i class={statusClass}></i> {people.status}
           </div>
         </div>
       </li>
