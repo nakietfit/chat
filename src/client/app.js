@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
+import Chat from './containers/Chat'
+
 export default class App extends Component {
     render() {
-        return <div>Welcome to React Boilerplate App</div>
+        return <Chat />
     }
 }
