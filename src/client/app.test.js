@@ -1,10 +1,10 @@
 import App from './app'
 import React from 'react'
-import {shallow} from 'enzyme'
+import { shallow } from 'enzyme'
+
 describe('App', () => {
-  test('should match snapshot', () => {
-    const wrapper = shallow(<App/>)
-    expect(wrapper.find('div').text()).toBe('Welcome to React Boilerplate App')
-    expect(wrapper).toMatchSnapshot()
-  })
+  test('App renders nested components', () => {
+    const app = shallow(<App />);
+    expect(app.find('Chat').length).toEqual(1);
+  });
 })
