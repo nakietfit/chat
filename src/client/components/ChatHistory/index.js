@@ -7,19 +7,19 @@ export default class ChatHistory extends Component {
       user: true,
       time: "10:10 AM, Today",
       name: "Olia",
-      message: "Hi Vincent, how are you? How is the project coming along?"
+      content: "Hi Vincent, how are you? How is the project coming along?"
     },
     {
       user: false,
       time: "10:12 AM, Today",
       name: "Vincent",
-      message: "Are we meeting today? Project has been already finished and I have results to show you."
+      content: "Are we meeting today? Project has been already finished and I have results to show you."
     },
     {
       user: true,
       time: "10:14 AM, Today",
       name: "Olia",
-      message: "Well I am not sure. The rest of the team is not here yet. Maybe in an hour or so? Have you faced any problems at the last phase of the project?"
+      content: "Well I am not sure. The rest of the team is not here yet. Maybe in an hour or so? Have you faced any problems at the last phase of the project?"
     }
   ]
 
