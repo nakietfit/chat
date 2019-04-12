@@ -13,12 +13,12 @@ export default class People extends Component {
     }
 
     return (
-      <li class="clearfix">
+      <li className="clearfix">
         <img src={people.avatar} alt="avatar" />
-        <div class="about">
-          <div class="name">{people.name}</div>
-          <div class="status">
-            <i class={statusClass}></i> {people.status}
+        <div className="about">
+          <div className="name">{people.name}</div>
+          <div className="status">
+            <i className={statusClass}></i> {people.status}
           </div>
         </div>
       </li>

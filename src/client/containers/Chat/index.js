@@ -7,9 +7,9 @@ import ChatMessage from '../../components/ChatMessage';
 export default class Chat extends Component {
   render() {
     return (
-      <div class="container clearfix">
+      <div className="container clearfix">
         <PeopleList />
-        <div class="chat">
+        <div className="chat">
           <ChatHeader />
           <ChatHistory />
           <ChatMessage />

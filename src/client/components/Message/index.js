@@ -8,20 +8,20 @@ export default class Message extends Component {
       <Fragment>
         {
           message.user ? (
-            <li class="clearfix">
-              <div class="message-data align-right">
-                <span class="message-data-time">{message.time}</span> &nbsp; &nbsp;
-                <span class="message-data-name">{message.name}</span> <i class="fa fa-circle me"></i>
+            <li className="clearfix">
+              <div className="message-data align-right">
+                <span className="message-data-time">{message.time}</span> &nbsp; &nbsp;
+                <span className="message-data-name">{message.name}</span> <i className="fa fa-circle me"></i>
               </div>
-              <div class="message my-message float-right">{message.content}</div>
+              <div className="message my-message float-right">{message.content}</div>
             </li>
           ) : (
             <li>
-              <div class="message-data">
-                <span class="message-data-name"><i class="fa fa-circle online"></i> {message.name}</span>
-                <span class="message-data-time">{message.time}</span>
+              <div className="message-data">
+                <span className="message-data-name"><i className="fa fa-circle online"></i> {message.name}</span>
+                <span className="message-data-time">{message.time}</span>
               </div>
-              <div class="message other-message">{message.content}</div>
+              <div className="message other-message">{message.content}</div>
             </li>
           )
         }

@@ -25,7 +25,7 @@ export default class ChatHistory extends Component {
 
   render() {
     return (
-      <div class="chat-history">
+      <div className="chat-history">
         <ul>
           {
             this.message_list.map((e, i) => <Message key={i} message={e} />)
