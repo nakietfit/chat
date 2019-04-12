@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ParseSDK from '../../helpers/parseSDK'
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -8,9 +9,17 @@ export default class SignUp extends Component {
     this.password = React.createRef();
   }
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
-    console.log(this.email.current.value, this.password.current.value);
+    var user = new ParseSDK.User();
+    user.set("username", this.email.current.value);
+    user.set("password", this.password.current.value);
+
+    try {
+      await user.signUp();
+    } catch (error) {
+      console.log("Error: " + error.code + " " + error.message);
+    }
   };
 
   render() {
