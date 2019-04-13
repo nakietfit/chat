@@ -1,8 +1,10 @@
 let path = require('path');
 let nodeExternals = require('webpack-node-externals');
 const HtmlWebPackPlugin = require('html-webpack-plugin')
+const Fiber = require('fibers');
+
 const moduleObj = {
-    loaders: [
+    rules: [
         {
             test: /\.js$/,
             exclude: /node_modules/,
@@ -10,11 +12,17 @@ const moduleObj = {
         },
         {
             test: /\.scss$/,
-            use: [
-                "style-loader", // creates style nodes from JS strings
-                "css-loader", // translates CSS into CommonJS
-                "sass-loader" // compiles Sass to CSS, using Node Sass by default
-            ]
+            use: [{
+                loader: "style-loader"
+            }, {
+                loader: "css-loader"
+            }, {
+                loader: "sass-loader",
+                options: {
+                    implementation: require("sass"),
+                    fiber: Fiber
+                }
+            }]
         }
     ],
 };
